@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: "backend"
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER_URL:http://localhost:8081/auth/realms/local-dev-realm}
+server:
+  port: 8090
